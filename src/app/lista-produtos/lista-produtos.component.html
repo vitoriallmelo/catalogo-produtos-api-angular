@@ -2,7 +2,7 @@
   <div *ngIf="!errorMessage">
       <div *ngFor="let produto of produtos" class="produto-card">
         <h3>{{ produto.title }}</h3>
-        <img class="imagem" src="{{ produto.image}}"/>
+        <img class="imagem"  [src]="produto.image"/>
         <p>${{ produto.price}}</p>
         <p>{{ produto.description | slice:0:100 }}...</p>
         <a [routerLink]="['/produto', produto.id]" class="btn">Detalhes</a>

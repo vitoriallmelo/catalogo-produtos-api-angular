@@ -1,7 +1,7 @@
 <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
     <div *ngIf="produto && !errorMessage" class="produto-detalhes">
       <h2>{{ produto.title}}</h2>
-      <img class="imagem" src="{{ produto.image}}"/>
+      <img class="imagem" [src]="produto.image"/>
       <p>${{ produto.price}}</p>
       <p>{{ produto.description}}</p>
       <p>Category: {{ produto.category}}</p>
