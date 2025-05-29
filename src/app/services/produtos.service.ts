@@ -9,9 +9,11 @@ export interface Produto {
   description: string;
   category: string;
   image: string;
-  rating: string;
-  rate: string;
-  count:
+  rating: {
+    rate: string;
+    count:number;
+  }
+  
 }
 
 @Injectable({
@@ -19,7 +21,7 @@ export interface Produto {
 })
 
 export class ProdutosService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private apiUrl = 'https://fakestoreapi.com/products';
 
   constructor(private http: HttpClient) {}
 

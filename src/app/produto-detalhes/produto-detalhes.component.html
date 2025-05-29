@@ -1,6 +1,11 @@
 <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
-    <div *ngIf="post && !errorMessage" class="produto-detalhes">
-      <h2>{{ produto.title }}</h2>
-      <p>{{ produto.body }}</p>
+    <div *ngIf="produto && !errorMessage" class="produto-detalhes">
+      <h2>{{ produto.title}}</h2>
+      <img class="imagem" src="{{ produto.image}}"/>
+      <p>${{ produto.price}}</p>
+      <p>{{ produto.description}}</p>
+      <p>Category: {{ produto.category}}</p>
+      <p>Rate: {{ produto.rating.count}}</p>
+      <p>Count: {{ produto.rating.rate}}</p>
       <a routerLink="/" class="btn">Voltar ao catálogo</a>
     </div>

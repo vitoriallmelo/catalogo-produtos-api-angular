@@ -6,7 +6,7 @@ import { ProdutosService, Produto} from '../services/produtos.service';
 @Component({
   selector: 'app-produto-detalhes',
   standalone: true,
-  imports: [CommonModule, RouterLink, ProdutosService],
+  imports: [CommonModule, RouterLink],
   templateUrl: './produto-detalhes.component.html',
   styleUrl: './produto-detalhes.component.css'
 })
