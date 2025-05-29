@@ -4,6 +4,6 @@ import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.co
 
 export const routes: Routes = [
     { path: '', component: ListaProdutosComponent },
-    { path: 'post/:id', component: ProdutoDetalhesComponent },
+    { path: 'produto/:id', component: ProdutoDetalhesComponent },
     { path: '**', redirectTo: '' }
 ];

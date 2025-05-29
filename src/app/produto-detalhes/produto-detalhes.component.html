@@ -1,1 +1,6 @@
-<p>produto-detalhes works!</p>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <div *ngIf="post && !errorMessage" class="produto-detalhes">
+      <h2>{{ produto.title }}</h2>
+      <p>{{ produto.body }}</p>
+      <a routerLink="/" class="btn">Voltar ao catálogo</a>
+    </div>

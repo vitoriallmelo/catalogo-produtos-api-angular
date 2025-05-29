@@ -2,29 +2,35 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 
-export interface Post {
+export interface Produto {
   id: number;
   title: string;
-  body: string;
+  price: string;
+  description: string;
+  category: string;
+  image: string;
+  rating: string;
+  rate: string;
+  count:
 }
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class PostService {
+export class ProdutosService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) {}
 
-  getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.apiUrl).pipe(
+  getProdutos(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(this.apiUrl).pipe(
       catchError(this.handleError)
     );
   }
 
-  getPost(id: number): Observable<Post> {
-    return this.http.get<Post>(`${this.apiUrl}/${id}`).pipe(
+  getProduto(id: number): Observable<Produto> {
+    return this.http.get<Produto>(`${this.apiUrl}/${id}`).pipe(
       catchError(this.handleError)
     );
   }
